@@ -15,7 +15,6 @@ function App() {
         <Route path='/materie' component={Materie} />
         <Route path='/joaca' component={Joaca} />
         <Route path='/simulare' component={Simulare} />
-
     </div>
       </Router>
   );
