@@ -1,0 +1,46 @@
+@import "../../Variables/Variables.scss";
+
+.modal {
+  background-color: #fff;
+  border-radius: 25px;
+  width: 400px;
+  max-width: 400px;
+  height: auto;
+  box-shadow: 0px 2px 4px rgba(9, 51, 84, 0.04), 0px 8px 16px rgba(9, 51, 84, 0.22);
+
+
+  .modal-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 25px 25px 0px 0px;
+    background: $Primary-PopupHeader;
+  }
+
+  .modal-header-text {
+    font-weight: 500;
+    color: #f4faff;
+    font-size: 18px;
+    line-height: 21.66px;
+  }
+
+  .modal-content {
+    font-size: 14px;
+    padding: 0px 16px;
+
+    h3 {
+      margin: 36px 0;
+    }
+
+    .romana {
+      color: $Materii-Romana;
+    }
+    .istorie {
+      color: $Materii-Istorie;
+    }
+    .geografie {
+      color: $Materii-Geografie;
+    }
+  }
+}

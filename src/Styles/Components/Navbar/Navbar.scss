@@ -1,0 +1,79 @@
+@import "../../Variables/Variables.scss";
+
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 9999;
+  height: 80px;
+  padding: 0 48px;
+  box-shadow: 0px 0px 2px rgba(9, 51, 84, 0.04),
+    0px 4px 8px rgba(9, 51, 84, 0.22);
+  width: 100%;
+  background: $primary-Modal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $primary-IBL200;
+
+  .navlogo {
+    display: flex;
+    align-items: center;
+  }
+
+  .navlinks {
+
+    display: flex;
+    align-items: center;
+
+
+    .acasa, .materie, .joaca, .simulare {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 20px;
+      
+
+      :hover {
+        cursor: pointer;
+      }
+
+    }
+
+    .simulare {
+      :hover {
+        transition-timing-function: ease-in-out;
+        transition: 0.3s;
+        background: $primary-IBL150;
+      }
+    }
+
+    .acasa-icon, .materie-icon, .joaca-icon, .simulare-icon {
+      margin-left: 8px;
+    }
+
+    .simulare-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 24px;
+      border-style: solid;
+      border-radius: 25px;
+      color: $primary-IBL200;
+      font-size: $label-18pxMedium;
+      border-color: $primary-IBL200;
+      background: $primary-IBL25;
+      box-shadow: 0px 0px 1px rgba(9, 51, 84, 0.04), 0px 2px 4px rgba(9, 51, 84, 0.22);
+    }
+  
+    a {
+     
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      list-style: none;
+    }
+  }
+
+  
+}

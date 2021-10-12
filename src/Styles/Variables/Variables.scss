@@ -1,0 +1,39 @@
+
+// COLORS
+
+$primary-Modal: #FEFFFF;
+$primary-IBL200: #4884B2;
+$primary-IBL150: #A1CCEF;
+
+
+$primary-IBL25: #F4FAFF;
+
+$primary-PopupHeader: linear-gradient(180deg, #ABD9FD 0%, #5591C1 100%);
+
+$materii-Romana: #8EBF9B;
+$materii-Istorie: #E7908B;
+$materii-Geografie: #79AAEE;
+
+
+
+// FONTS
+
+$label-18pxMedium: 18px;
+
+// SPACING
+
+$spacing-md: 16px;
+$spacing-lg: 32px;
+
+// BORDER RADIUS
+
+$borderRadius: 25px;
+
+
+@mixin breakpoint($point) {
+    @if $point == md {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+}

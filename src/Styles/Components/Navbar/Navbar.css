@@ -1,0 +1,58 @@
+.navbar {
+  position: sticky;
+  top: 0px;
+  z-index: 9999;
+  height: 80px;
+  padding: 0 48px;
+  box-shadow: 0px 0px 2px rgba(9, 51, 84, 0.04), 0px 4px 8px rgba(9, 51, 84, 0.22);
+  width: 100%;
+  background: #FEFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #4884B2;
+}
+.navbar .navlogo {
+  display: flex;
+  align-items: center;
+}
+.navbar .navlinks {
+  display: flex;
+  align-items: center;
+}
+.navbar .navlinks .acasa, .navbar .navlinks .materie, .navbar .navlinks .joaca, .navbar .navlinks .simulare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+.navbar .navlinks .acasa :hover, .navbar .navlinks .materie :hover, .navbar .navlinks .joaca :hover, .navbar .navlinks .simulare :hover {
+  cursor: pointer;
+}
+.navbar .navlinks .simulare :hover {
+  transition-timing-function: ease-in-out;
+  transition: 0.3s;
+  background: #A1CCEF;
+}
+.navbar .navlinks .acasa-icon, .navbar .navlinks .materie-icon, .navbar .navlinks .joaca-icon, .navbar .navlinks .simulare-icon {
+  margin-left: 8px;
+}
+.navbar .navlinks .simulare-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  border-style: solid;
+  border-radius: 25px;
+  color: #4884B2;
+  font-size: 18px;
+  border-color: #4884B2;
+  background: #F4FAFF;
+  box-shadow: 0px 0px 1px rgba(9, 51, 84, 0.04), 0px 2px 4px rgba(9, 51, 84, 0.22);
+}
+.navbar .navlinks a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+}/*# sourceMappingURL=Navbar.css.map */
