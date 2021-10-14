@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/Components/Modal/Modal.css";
+import "./Modal.scss";
 
 export const Modal = ({header, img}) => {
   return (

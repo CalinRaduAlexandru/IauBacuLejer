@@ -1,8 +1,8 @@
 import React from "react";
-import {Modal} from "../Components/Modal";
-import "../Styles/Homepage.css";
-import Slothy from "../Assets/Slothy.svg";
-import progres from '../Assets/Icons/Modalbar-Progres.svg'
+import {Modal} from "../../Components/Modal/Modal";
+import "./Homepage.scss";
+import Slothy from "../../Assets/Slothy.svg";
+import progres from '../../Assets/Icons/Modalbar-Progres.svg'
 
 
 function Homepage() {
