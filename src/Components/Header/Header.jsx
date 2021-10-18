@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
 
 import { BiMenuAltRight } from "react-icons/bi";
@@ -22,10 +22,10 @@ const Header = () => {
         <Link to="/" className={classes.header__content__logo}>
           <img src={logo} alt="logo" height="80px" />
         </Link>
-        <nav className={classes.header__content__nav}>
-          {currentUser ? (
-            <>
-              <h2>Bine ai venit!</h2>{" "}
+        {currentUser ? (
+          <>
+            <h2 className={classes.header__title}>Bine ai venit!</h2>{" "}
+            <nav className={classes.header__content__nav}>
               <h4 className={classes.header__profile}>
                 {JSON.stringify(currentUser.email)}
               </h4>{" "}
@@ -39,9 +39,9 @@ const Header = () => {
               >
                 <Btn>Logout</Btn>
               </Link>
-            </>
-          ) : null}
-        </nav>
+            </nav>
+          </>
+        ) : null}
 
         <div className={classes.header__content__toggle}>
           {!menuOpen ? (

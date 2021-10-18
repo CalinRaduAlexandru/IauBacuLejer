@@ -2,18 +2,16 @@ import React, { useState } from "react";
 
 import SignUp from "../../Components/SignUp/SingUp.jsx";
 import { useAuth } from "../../contexts/AuthContext";
-import { FaGoogle } from "react-icons/fa";
-import Btn from "../../Ingredients/Btn/Btn.jsx";
+import Popup from "../../Components/Popup/Popup.jsx";
 import { Redirect } from "react-router-dom";
 
 const Onboarding = () => {
-  const [modal, setModal] = useState(false);
-  const { signInWithGoogle, register } = useAuth();
+  const [popup, setPopup] = useState(false);
   const { currentUser } = useAuth();
 
-  const toggleModal = (e) => {
+  const togglePopup = (e) => {
     e.preventDefault();
-    setModal(!modal);
+    setPopup(!popup);
   };
   return (
     <>
@@ -21,22 +19,20 @@ const Onboarding = () => {
         <Redirect to="/" />
       ) : (
         <>
-          {!modal ? (
-            <div>
-              <div className="onboarding-container">
-                <button
-                  className="btn btn--primary--solid btn--medium"
-                  onClick={toggleModal}
-                >
-                  Logheaza-te
-                </button>
-              </div>
+          <div>
+            <div className="onboarding-container">
+              <button
+                className="btn btn--primary--solid btn--medium"
+                onClick={togglePopup}
+              >
+                Logheaza-te
+              </button>
             </div>
-          ) : (
-            <>
-              <SignUp toggleModal={toggleModal} />
-            </>
-          )}{" "}
+          </div>
+
+          <Popup popup={popup} togglePopup={togglePopup}>
+            <SignUp />
+          </Popup>
         </>
       )}
     </>

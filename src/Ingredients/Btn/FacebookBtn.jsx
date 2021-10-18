@@ -1,9 +1,8 @@
 import React from "react";
 import { useAuth } from "../../contexts/AuthContext";
-import Btn from "./Btn";
 
 const FacebookBtn = ({ children }) => {
-  const { signInWithGoogle, register } = useAuth();
+  const { signInWithGoogle } = useAuth();
 
   return (
     <button

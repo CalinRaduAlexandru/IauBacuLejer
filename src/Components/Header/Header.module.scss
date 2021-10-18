@@ -41,20 +41,6 @@
       align-items: center;
     }
 
-    &__acasa,
-    &__materie,
-    &__joaca,
-    &__simulare {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    &__simulare {
-        border: 1px solid transparent;
-        border-color: $primary-IBL150;
-    }
-
     &__nav {
       top: 0;
       right: 100%;
@@ -71,6 +57,10 @@
       backdrop-filter: blur(2px);
       transform: translate(0);
       transition: 0.3s ease transform;
+
+      h2 {
+        align-self: center;
+      }
 
       @include breakpoint(md) {
         transform: none;
@@ -112,7 +102,10 @@
             }
             &:active {
               border-radius: calc(#{$borderRadius} + 6px);
-              background: linear-gradient(rgba($IBL150, 0.1), rgba($IBL150, 0.2));
+              background: linear-gradient(
+                rgba($IBL150, 0.1),
+                rgba($IBL150, 0.2)
+              );
             }
           }
         }

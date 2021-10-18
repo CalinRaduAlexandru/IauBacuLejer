@@ -1,21 +1,11 @@
 import React from "react";
-import { useAuth } from "../../contexts/AuthContext";
-
 import "./Btn.scss";
 
 const STYLES = ["btn--primary--solid", "btn--secondary--ghost"];
 
 const SIZES = ["btn--medium", "btn--large"];
 
-const Btn = ({
-  children,
-  type,
-  onClick,
-  signUpWithGoogle,
-  buttonStyle,
-  buttonSize,
-}) => {
-  const { signInWithGoogle, register } = useAuth();
+const Btn = ({ children, buttonStyle, buttonSize }) => {
   const checkButtonStyle = STYLES.includes(buttonStyle)
     ? buttonStyle
     : STYLES[0];

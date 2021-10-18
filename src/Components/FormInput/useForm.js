@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { auth, createUserProfileDocument } from "../utils/init-firebase";
+import { useState } from "react";
+import { auth, createUserProfileDocument } from "../../utils/init-firebase";
 
 function useForm() {
   const [values, setValues] = useState({

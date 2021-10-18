@@ -1,6 +1,4 @@
-/* eslint-disable no-restricted-globals */
-import React, { useState } from "react";
-import useForm from "../useForm.js";
+import useForm from "../FormInput/useForm.js";
 
 import FormInput from "../FormInput/FormInput.jsx";
 import Btn from "../../Ingredients/Btn/Btn.jsx";
@@ -13,9 +11,6 @@ const SignUp = ({ toggleModal }) => {
 
   return (
     <div className="sign-up">
-      <span className="exit" onClick={toggleModal}>
-        &#x2718;
-      </span>
       <h2 className="title">Înregistrează-te</h2>
 
       <form className="sign-up-form" onSubmit={handleSubmit}>
@@ -56,7 +51,7 @@ const SignUp = ({ toggleModal }) => {
             Înregistrează-te
           </Btn>
           <span>Sau</span>
-          <FacebookBtn>Continuă cu Facebook</FacebookBtn>
+          <FacebookBtn>Continuă cu Google</FacebookBtn>
         </div>
       </form>
     </div>
