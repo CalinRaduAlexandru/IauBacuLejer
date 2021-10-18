@@ -1,6 +1,6 @@
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/firestore';
-import 'firebase/compat/auth';
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
+import "firebase/compat/auth";
 
 // const firebaseConfig = {
 //   apiKey: process.env.REACT_APP_API_KEY,
@@ -8,7 +8,7 @@ import 'firebase/compat/auth';
 //   projectId: process.env.REACT_APP_PROJECT_ID,
 //   storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
 //   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-//   appId: process.env.REACT_APP_APP_ID
+//   appId: process.env.REACT_APP_APP_ID,
 // };
 
 const config = {
@@ -17,7 +17,7 @@ const config = {
   projectId: "iaubaculejer-5b607",
   storageBucket: "iaubaculejer-5b607.appspot.com",
   messagingSenderId: "705370639837",
-  appId: "1:705370639837:web:e63d6ad283d6c68a3f3a34"
+  appId: "1:705370639837:web:e63d6ad283d6c68a3f3a34",
 };
 
 firebase.initializeApp(config);
@@ -37,10 +37,10 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         displayName,
         email,
         createdAt,
-        ...additionalData
+        ...additionalData,
       });
     } catch (error) {
-      console.log('error creating user', error.message);
+      console.log("error creating user", error.message);
     }
   }
 
@@ -51,6 +51,5 @@ export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
 const provider = new firebase.auth.GoogleAuthProvider();
-provider.setCustomParameters({ prompt: 'select_account' });
+provider.setCustomParameters({ prompt: "select_account" });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
-
