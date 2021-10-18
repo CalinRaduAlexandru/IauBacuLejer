@@ -7,6 +7,7 @@
   width: 100%;
   height: $headerHeight;
   padding: 0 1.5rem;
+  z-index: 1000;
   @include breakpoint(md) {
     padding: 0 3rem;
   }
@@ -57,10 +58,6 @@
       backdrop-filter: blur(2px);
       transform: translate(0);
       transition: 0.3s ease transform;
-
-      h2 {
-        align-self: center;
-      }
 
       @include breakpoint(md) {
         transform: none;

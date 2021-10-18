@@ -15,8 +15,8 @@
   }
 
   &.btn--primary--solid {
-    background: $btn-primary;
-    color: $primary-Modal;
+    @include primary-btn;
+    color: $btn-primary;
   }
 
   &.btn--secondary--ghost {

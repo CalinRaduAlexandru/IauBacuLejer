@@ -23,24 +23,21 @@ const Header = () => {
           <img src={logo} alt="logo" height="80px" />
         </Link>
         {currentUser ? (
-          <>
-            <h2 className={classes.header__title}>Bine ai venit!</h2>{" "}
-            <nav className={classes.header__content__nav}>
-              <h4 className={classes.header__profile}>
-                {JSON.stringify(currentUser.email)}
-              </h4>{" "}
-              <Link
-                to="/"
-                name="Logout"
-                onClick={async (e) => {
-                  e.preventDefault();
-                  await logout();
-                }}
-              >
-                <Btn>Logout</Btn>
-              </Link>
-            </nav>
-          </>
+          <nav className={classes.header__content__nav}>
+            <h4 className={classes.header__profile}>
+              {JSON.stringify(currentUser.email)}
+            </h4>{" "}
+            <Link
+              to="/"
+              name="Logout"
+              onClick={async (e) => {
+                e.preventDefault();
+                await logout();
+              }}
+            >
+              <Btn>Logout</Btn>
+            </Link>
+          </nav>
         ) : null}
 
         <div className={classes.header__content__toggle}>

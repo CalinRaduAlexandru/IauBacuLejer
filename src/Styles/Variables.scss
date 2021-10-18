@@ -1,28 +1,25 @@
-
 // BTN - COLORS
 
-$btn-primary: linear-gradient(180deg, #FFC398 0%, #EA8238 100%);
+$btn-primary: #fbf1e5;
 $btn-succces: #75fa73;
 
+// Mixin
 
 // COLORS
 
-$primary-Modal: #FEFFFF;
-$primary-IBL300: #35547A;
-$primary-IBL200: #4884B2;
-$primary-IBL150: #A1CCEF;
-$primary-IBL50: #D5EAFE;
+$primary-Modal: #feffff;
+$primary-IBL300: #35547a;
+$primary-IBL200: #4884b2;
+$primary-IBL150: #a1ccef;
+$primary-IBL50: #d5eafe;
 
+$primary-IBL25: #f4faff;
 
-$primary-IBL25: #F4FAFF;
+$primary-PopupHeader: linear-gradient(180deg, #abd9fd 0%, #5591c1 100%);
 
-$primary-PopupHeader: linear-gradient(180deg, #ABD9FD 0%, #5591C1 100%);
-
-$materii-Romana: #8EBF9B;
-$materii-Istorie: #E7908B;
-$materii-Geografie: #79AAEE;
-
-
+$materii-Romana: #8ebf9b;
+$materii-Istorie: #e7908b;
+$materii-Geografie: #79aaee;
 
 // FONTS
 
@@ -37,7 +34,6 @@ $spacing-lg: 32px;
 
 $borderRadius: 25px;
 
-
 // RGB colors
 $dark: rgb(29, 29, 29);
 $IBL150: rgb(161, 204, 239);
@@ -45,15 +41,34 @@ $light: rgb(250, 253, 255);
 $primary: rgb(72, 132, 178);
 $bg: rgb(244, 244, 255);
 
-
 // header height
 $headerHeight: 100px;
 
 @mixin breakpoint($point) {
-    @if $point == md {
-        // 768px
-        @media (min-width: 48em) {
-            @content;
-        }
+  @if $point == md {
+    // 768px
+    @media (min-width: 48em) {
+      @content;
     }
+  }
+}
+
+@mixin primary-btn {
+  background: rgb(254, 190, 114);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(254, 190, 114, 1) 0%,
+    rgba(244, 108, 48, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(254, 190, 114, 1) 0%,
+    rgba(244, 108, 48, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(254, 190, 114, 1) 0%,
+    rgba(244, 108, 48, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#febe72",endColorstr="#f46c30",GradientType=1);
 }
