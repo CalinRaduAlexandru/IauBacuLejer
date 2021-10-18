@@ -17,6 +17,7 @@
   &__profile {
     display: flex;
     align-items: center;
+    padding: 40px;
 
     @media (max-width: 768px) {
       display: none;

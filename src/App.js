@@ -1,30 +1,27 @@
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect, useLocation } from "react-router-dom";
+import Onboarding from "./Pages/Onboarding/Onboarding";
 import Homepage from "./Pages/Homepage/Homepage";
-import Materie from './Pages/Materie';
-import Joaca from './Pages/Joaca';
-import Simulare from './Pages/Simulare';
 import Layout from "./Components/Layout/Layout";
+import AuthContextProvider from './contexts/AuthContext'
+
 
 import "./App.css";
 
 function App() {
   return (
+    <AuthContextProvider>
+
     <Layout>
     <Switch>
-        <Route path="/" exact>
+        <Route path="/" exact >
             <Homepage />
         </Route>
-        <Route path="/materie">
-            <Materie />
-        </Route>
-        <Route path="/joaca">
-            <Joaca />
-        </Route>
-        <Route path="/simulare">
-            <Simulare />
+        <Route path="/Login" exact>
+            <Onboarding />
         </Route>
     </Switch>
 </Layout>
+</AuthContextProvider>
   );
 }
 

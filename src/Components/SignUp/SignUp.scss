@@ -1,0 +1,33 @@
+.sign-up {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  max-width: 480px;
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 25px;
+  box-shadow: 0px 3.24306px 12.9722px rgba(9, 51, 84, 0.08),
+    0px 32.4306px 51.8889px rgba(9, 51, 84, 0.22);
+
+  .exit {
+    position: absolute;
+    right: 5%;
+    font-size: 24px;
+  }
+
+  .title {
+    align-self: center;
+    margin: 10px 0;
+    font-weight: 500;
+  }
+
+  .btns-group {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      align-self: center;
+    }
+  }
+}

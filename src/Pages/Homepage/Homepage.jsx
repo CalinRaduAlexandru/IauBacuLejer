@@ -1,18 +1,28 @@
 import React from "react";
-import {Modal} from "../../Components/Modal/Modal";
+import { Redirect } from "react-router-dom";
+import { Modal } from "../../Components/Modal/Modal";
 import "./Homepage.scss";
 import Slothy from "../../Assets/Slothy.svg";
-import progres from '../../Assets/Icons/Modalbar-Progres.svg'
-
+import progres from "../../Assets/Icons/Modalbar-Progres.svg";
+import { useAuth } from "../../contexts/AuthContext";
 
 function Homepage() {
+  const { currentUser } = useAuth();
   return (
-    <div className="homepage">
-      <Modal header='Progres'img={progres}/>
-      <div className="slothy">
-        <img src={Slothy} alt="Slothy mascot" height='550px'/>
-      </div>
-    </div>
+    <>
+      {!currentUser ? (
+        <Redirect to="/login" />
+      ) : (
+        <>
+          <div className="homepage">
+            <Modal clear={false} header="Progres" img={progres} />
+            <div className="slothy">
+              <img src={Slothy} alt="Slothy mascot" height="550px" />
+            </div>
+          </div>
+        </>
+      )}
+    </>
   );
 }
 

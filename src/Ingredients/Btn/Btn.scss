@@ -1,0 +1,37 @@
+@import "../../Styles/Variables.scss";
+
+.btn {
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 1 ease-in-out;
+  border: none;
+  margin: 10px;
+  box-shadow: 0px 0px 1.2px rgba(9, 51, 84, 0.03),
+    0px 3px 8px rgba(9, 51, 84, 0.17);
+
+  &:hover {
+    transform: scale(1.03);
+    background-color: linear-gradient(rgba(255, 255, 255, 0.3) 0 0);
+  }
+
+  &.btn--primary--solid {
+    background: $btn-primary;
+    color: $primary-Modal;
+  }
+
+  &.btn--secondary--ghost {
+    background: $primary-Modal;
+    border: 2px solid $primary-IBL200;
+    color: $primary-IBL200;
+  }
+
+  &.btn--medium {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  &.btn--large {
+    padding: 15px 30px;
+    font-size: 18px;
+  }
+}
