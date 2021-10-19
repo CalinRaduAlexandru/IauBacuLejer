@@ -6,13 +6,12 @@ const Popup = ({ togglePopup, popup, children }) => {
   if (!popup) return null;
   return ReactDom.createPortal(
     <>
-      <div className="overlay">
-        <div className="popup">
-          <span className="exit" onClick={togglePopup}>
-            &#x2718;
-          </span>
-          {children}
-        </div>
+      <div className="overlay" onClick={togglePopup}></div>
+      <div className="popup">
+        <span className="exit" onClick={togglePopup}>
+          &#x2718;
+        </span>
+        {children}
       </div>
     </>,
     document.getElementById("portal")

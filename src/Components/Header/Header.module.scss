@@ -6,8 +6,8 @@
     0px 4px 8px rgba(9, 51, 84, 0.22);
   width: 100%;
   height: $headerHeight;
+  z-index: 999;
   padding: 0 1.5rem;
-  z-index: 1000;
   @include breakpoint(md) {
     padding: 0 3rem;
   }
