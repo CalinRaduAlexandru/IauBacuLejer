@@ -1,5 +1,6 @@
 import React from "react";
 import "./Modal.scss";
+import Btn from "../../Ingredients/Btn/Btn.jsx";
 
 export const Modal = ({ header, img, clear = "true", children }) => {
   return (
@@ -16,6 +17,8 @@ export const Modal = ({ header, img, clear = "true", children }) => {
             <h3 className="romana">Română</h3>
             <h3 className="istorie">Istorie</h3>
             <h3 className="geografie">Geografie</h3>
+            <Btn>Caută cameră</Btn>
+            <Btn buttonStyle="btn--secondary--ghost">Creează cameră</Btn>
           </div>
         </div>
       )}

@@ -7,6 +7,7 @@ import logo from "../../Assets/Logo.png";
 import classes from "./Header.module.scss";
 import { NavLink as Link } from "react-router-dom";
 import Btn from "../../Ingredients/Btn/Btn.jsx";
+import DarkMode from "../Darkmode";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,6 +38,7 @@ const Header = () => {
             >
               <Btn>Logout</Btn>
             </Link>
+            <DarkMode />
           </nav>
         ) : null}
 

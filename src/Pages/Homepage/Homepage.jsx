@@ -16,6 +16,7 @@ function Homepage() {
         <>
           <div className="homepage">
             <Modal clear={false} header="Progres" img={progres} />
+
             <div className="slothy">
               <img src={Slothy} alt="Slothy mascot" height="550px" />
             </div>
